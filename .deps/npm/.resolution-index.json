@@ -7,43 +7,11 @@
       }
     }
   },
-  "contracts/Lab1.sol": {
+  "contracts/Lab7.sol": {
     "__sources__": {
-      "contracts/Lab1.sol": {
-        "content": "//SPDX-License-Identifier: BSD\r\npragma solidity ^0.7.4;\r\ncontract Chat {\r\n    string public message;\r\n\r\n    constructor(string memory initialMessage) {\r\n        message = initialMessage;\r\n    }\r\n\r\n    function setMessage(string memory newMessage) public {\r\n        message = newMessage;\r\n    }\r\n}",
-        "file": "contracts/Lab1.sol"
-      }
-    }
-  },
-  "contracts/Lab2.sol": {
-    "__sources__": {
-      "contracts/Lab2.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo2 {\r\n    function getResult(uint a, uint b) public pure returns (string memory) {\r\n        return  integerTostring(a+b); \r\n    }\r\n    function integerTostring(uint256 i) internal pure returns (string memory) {\r\n        if(i == 0) {\r\n            return \"0\";\r\n        }\r\n        //算出有幾位數\r\n        uint j = i;\r\n        uint len;\r\n        while( j != 0 ) {\r\n            len++;\r\n            j /= 10;\r\n        }\r\n        //將數字轉成字串\r\n        bytes memory bstr = new bytes(len);\r\n        uint k = len - 1;\r\n        while( i != 0 ) {\r\n            bstr[k--] = bytes1(uint8(48 + i % 10));\r\n            i /= 10;\r\n        }\r\n        return string(bstr);\r\n        }\r\n    }",
-        "file": "contracts/Lab2.sol"
-      }
-    }
-  },
-  "contracts/Lab3.sol": {
-    "__sources__": {
-      "contracts/Lab3.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo3 {\r\n    //陣列設值方法1\r\n    function arrayExplain1() public pure returns(uint256){\r\n        uint len = 7;\r\n        uint256[] memory a = new uint256[](len);\r\n        return a.length;\r\n    }\r\n     //陣列預設方法2\r\n    function arrayExplain2() public pure returns(uint256){\r\n        uint256[10] memory b;\r\n        return b.length;\r\n    }\r\n     function arrayExplain3(uint8 idx) public pure returns(uint256){\r\n        uint len = 10;\r\n        uint256[] memory a = new uint256[](len);\r\n        a[0]=2;\r\n        a[1]=4;\r\n        a[2]=6;\r\n        a[3]=8;\r\n        a[4]=10;\r\n        return a[idx];\r\n    }\r\n    function arrayExplain4(uint8 idx) public pure returns(uint256){\r\n        uint256[10] memory b;\r\n        b[5]=5;\r\n        b[6]=10;\r\n        b[7]=15;\r\n        b[8]=20;\r\n        b[9]=25;\r\n        return b[idx];\r\n    }\r\n\r\n    uint256[10] public members;\r\n    uint256[] public members2 = new uint256[](10);\r\n    function arrayExplain5() public  {\r\n        members[0]=100;\r\n        members[1]=99;\r\n        members[2]=98;\r\n        members[3]=97;\r\n        members[4]=96;\r\n        members[5]=95;\r\n        members[6]=94;\r\n        members[7]=93;\r\n        members[8]=92;\r\n        members[9]=91;\r\n\r\n        members2[0]=101;\r\n        members2[1]=102;\r\n        members2[2]=103;\r\n        members2[3]=104;\r\n        members2[4]=105;\r\n        members2[5]=106;\r\n        members2[6]=107;\r\n        members2[7]=108;\r\n        members2[8]=109;\r\n        members2[9]=110;\r\n    }\r\n\r\n    function arrayExplain6() public view returns(uint256[10] memory) {\r\n        return members;\r\n    }\r\n\r\n    function arrayExplain7() public view returns(uint256[] memory) {\r\n        return members2;\r\n    }\r\n\r\n    function arrayExplain8(uint x) public {\r\n        //members.push(x);\r\n        members2.push(x);\r\n    }\r\n    function arrayExplain9() public {\r\n        // this should fail，陣列需告要到外層才可以變動長度\r\n         //uint256[] memory a = new uint256[](5);\r\n         //a.push(123);\r\n    }\r\n}",
-        "file": "contracts/Lab3.sol"
-      }
-    }
-  },
-  "contracts/Lab4.sol": {
-    "__sources__": {
-      "contracts/Lab4.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo4 {\r\n    enum StarbuckSize {SHORT, TAll, GRANDE, VENTI, TRENTA}\r\n    StarbuckSize size;\r\n    StarbuckSize constant defaultSize = StarbuckSize.TAll;\r\n\r\n    function setVenti() public{\r\n        size = StarbuckSize.VENTI;\r\n    }\r\n    function getCurrentSize() public view returns(StarbuckSize){\r\n        return size;\r\n    }\r\n\r\n    function getDefaultSize() public pure returns(StarbuckSize){\r\n        return defaultSize;\r\n    }\r\n\r\n     function getDefaultSize2() public pure returns(uint256){\r\n        return uint256(defaultSize);\r\n    }\r\n\r\n    function setCurrentSize(StarbuckSize newSize) public {\r\n        size = newSize;\r\n    }\r\n\r\n    function setCurrentSize2(uint256 newSize) public{\r\n        size = StarbuckSize(newSize);\r\n    }\r\n}",
-        "file": "contracts/Lab4.sol"
-      }
-    }
-  },
-  "contracts/Lab5.sol": {
-    "__sources__": {
-      "contracts/Lab5.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Demo5 {\r\n    struct Course {\r\n        string id;\r\n        string name;\r\n        uint256 duration;\r\n    }\r\n\r\n    Course currentCourse;\r\n    function setDefaultCourse() public {\r\n        currentCourse = Course(\"POOP\", \"Python OCP\", 35);\r\n    }\r\n\r\n     function setNewCourse(string memory newId, string memory newName, uint256 newDuration) public {\r\n        currentCourse = Course(newId, newName, newDuration);\r\n    }\r\n\r\n    function getCourseId() public view returns(string memory) {\r\n        return currentCourse.id;\r\n    }\r\n\r\n    function getCourse() public view returns (Course memory) {\r\n        return currentCourse;\r\n    }\r\n}",
-        "file": "contracts/Lab5.sol"
+      "contracts/Lab7.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo7 {\r\n    function getMultiple() public pure returns(uint256, uint256) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        return (x+y, x*y);\r\n    }\r\n    function getMultipleWithoutReturns() public pure returns (uint256 sum, uint256 plus) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        sum = x+y;\r\n        plus = x*y;\r\n    }\r\n}",
+        "file": "contracts/Lab7.sol"
       }
     }
   },
@@ -55,11 +23,51 @@
       }
     }
   },
-  "contracts/Lab7.sol": {
+  "contracts/Lab5.sol": {
     "__sources__": {
-      "contracts/Lab7.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo7 {\r\n    function getMultiple() public pure returns(uint256, uint256) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        return (x+y, x*y);\r\n    }\r\n    function getMultipleWithoutReturns() public pure returns (uint256 sum, uint256 plus) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        sum = x+y;\r\n        plus = x*y;\r\n    }\r\n}",
-        "file": "contracts/Lab7.sol"
+      "contracts/Lab5.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Demo5 {\r\n    struct Course {\r\n        string id;\r\n        string name;\r\n        uint256 duration;\r\n    }\r\n\r\n    Course currentCourse;\r\n    function setDefaultCourse() public {\r\n        currentCourse = Course(\"POOP\", \"Python OCP\", 35);\r\n    }\r\n\r\n     function setNewCourse(string memory newId, string memory newName, uint256 newDuration) public {\r\n        currentCourse = Course(newId, newName, newDuration);\r\n    }\r\n\r\n    function getCourseId() public view returns(string memory) {\r\n        return currentCourse.id;\r\n    }\r\n\r\n    function getCourse() public view returns (Course memory) {\r\n        return currentCourse;\r\n    }\r\n}",
+        "file": "contracts/Lab5.sol"
+      }
+    }
+  },
+  "contracts/Lab4.sol": {
+    "__sources__": {
+      "contracts/Lab4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo4 {\r\n    enum StarbuckSize {SHORT, TAll, GRANDE, VENTI, TRENTA}\r\n    StarbuckSize size;\r\n    StarbuckSize constant defaultSize = StarbuckSize.TAll;\r\n\r\n    function setVenti() public{\r\n        size = StarbuckSize.VENTI;\r\n    }\r\n    function getCurrentSize() public view returns(StarbuckSize){\r\n        return size;\r\n    }\r\n\r\n    function getDefaultSize() public pure returns(StarbuckSize){\r\n        return defaultSize;\r\n    }\r\n\r\n     function getDefaultSize2() public pure returns(uint256){\r\n        return uint256(defaultSize);\r\n    }\r\n\r\n    function setCurrentSize(StarbuckSize newSize) public {\r\n        size = newSize;\r\n    }\r\n\r\n    function setCurrentSize2(uint256 newSize) public{\r\n        size = StarbuckSize(newSize);\r\n    }\r\n}",
+        "file": "contracts/Lab4.sol"
+      }
+    }
+  },
+  "contracts/Lab3.sol": {
+    "__sources__": {
+      "contracts/Lab3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo3 {\r\n    //陣列設值方法1\r\n    function arrayExplain1() public pure returns(uint256){\r\n        uint len = 7;\r\n        uint256[] memory a = new uint256[](len);\r\n        return a.length;\r\n    }\r\n     //陣列預設方法2\r\n    function arrayExplain2() public pure returns(uint256){\r\n        uint256[10] memory b;\r\n        return b.length;\r\n    }\r\n     function arrayExplain3(uint8 idx) public pure returns(uint256){\r\n        uint len = 10;\r\n        uint256[] memory a = new uint256[](len);\r\n        a[0]=2;\r\n        a[1]=4;\r\n        a[2]=6;\r\n        a[3]=8;\r\n        a[4]=10;\r\n        return a[idx];\r\n    }\r\n    function arrayExplain4(uint8 idx) public pure returns(uint256){\r\n        uint256[10] memory b;\r\n        b[5]=5;\r\n        b[6]=10;\r\n        b[7]=15;\r\n        b[8]=20;\r\n        b[9]=25;\r\n        return b[idx];\r\n    }\r\n\r\n    uint256[10] public members;\r\n    uint256[] public members2 = new uint256[](10);\r\n    function arrayExplain5() public  {\r\n        members[0]=100;\r\n        members[1]=99;\r\n        members[2]=98;\r\n        members[3]=97;\r\n        members[4]=96;\r\n        members[5]=95;\r\n        members[6]=94;\r\n        members[7]=93;\r\n        members[8]=92;\r\n        members[9]=91;\r\n\r\n        members2[0]=101;\r\n        members2[1]=102;\r\n        members2[2]=103;\r\n        members2[3]=104;\r\n        members2[4]=105;\r\n        members2[5]=106;\r\n        members2[6]=107;\r\n        members2[7]=108;\r\n        members2[8]=109;\r\n        members2[9]=110;\r\n    }\r\n\r\n    function arrayExplain6() public view returns(uint256[10] memory) {\r\n        return members;\r\n    }\r\n\r\n    function arrayExplain7() public view returns(uint256[] memory) {\r\n        return members2;\r\n    }\r\n\r\n    function arrayExplain8(uint x) public {\r\n        //members.push(x);\r\n        members2.push(x);\r\n    }\r\n    function arrayExplain9() public {\r\n        // this should fail，陣列需告要到外層才可以變動長度\r\n         //uint256[] memory a = new uint256[](5);\r\n         //a.push(123);\r\n    }\r\n}",
+        "file": "contracts/Lab3.sol"
+      }
+    }
+  },
+  "contracts/Lab2.sol": {
+    "__sources__": {
+      "contracts/Lab2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo2 {\r\n    function getResult(uint a, uint b) public pure returns (string memory) {\r\n        return  integerTostring(a+b); \r\n    }\r\n    function integerTostring(uint256 i) internal pure returns (string memory) {\r\n        if(i == 0) {\r\n            return \"0\";\r\n        }\r\n        //算出有幾位數\r\n        uint j = i;\r\n        uint len;\r\n        while( j != 0 ) {\r\n            len++;\r\n            j /= 10;\r\n        }\r\n        //將數字轉成字串\r\n        bytes memory bstr = new bytes(len);\r\n        uint k = len - 1;\r\n        while( i != 0 ) {\r\n            bstr[k--] = bytes1(uint8(48 + i % 10));\r\n            i /= 10;\r\n        }\r\n        return string(bstr);\r\n        }\r\n    }",
+        "file": "contracts/Lab2.sol"
+      }
+    }
+  },
+  "contracts/Lab1.sol": {
+    "__sources__": {
+      "contracts/Lab1.sol": {
+        "content": "//SPDX-License-Identifier: BSD\r\npragma solidity ^0.7.4;\r\ncontract Chat {\r\n    string public message;\r\n\r\n    constructor(string memory initialMessage) {\r\n        message = initialMessage;\r\n    }\r\n\r\n    function setMessage(string memory newMessage) public {\r\n        message = newMessage;\r\n    }\r\n}",
+        "file": "contracts/Lab1.sol"
+      }
+    }
+  },
+  "contracts/Lab8.sol": {
+    "__sources__": {
+      "contracts/Lab8.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo8 {\r\n    address owner;\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n    modifier onlyOwner() {\r\n        require(msg.sender==owner);\r\n        _;\r\n    }\r\n    modifier costs(uint256 price) {\r\n        if (msg.value >= price) {\r\n        _;\r\n        }\r\n    }\r\n}\r\n\r\ncontract Register is Demo8{\r\n    mapping(address=>bool) public registeredAddress;\r\n    uint256 public price;\r\n    constructor(uint256 initPrice) {\r\n        price = initPrice;\r\n    }\r\n    function register() public payable costs(price) {\r\n        registeredAddress[msg.sender]=true;\r\n    }\r\n    function changePrice(uint256 newPrice) public onlyOwner{\r\n        price = newPrice;\r\n    }\r\n}",
+        "file": "contracts/Lab8.sol"
       }
     }
   }
