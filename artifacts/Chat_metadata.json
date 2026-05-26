@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.7.4+commit.3f05b770"
+		"version": "0.7.6+commit.7338295f"
 	},
 	"language": "Solidity",
 	"output": {
@@ -15,19 +15,6 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "getMessage",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -84,11 +71,11 @@
 	},
 	"sources": {
 		"contracts/Lab1.sol": {
-			"keccak256": "0x624d2e53d7f96a1da249626f32397fe0fb33f31cfb4550bd44670982be4a99b7",
+			"keccak256": "0x08439dd33e3a9bbeb40e20e37e2dc63fb2c2d526511c2323d0740ae05722826e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f8f83a4a2d2f4155cbb667cfd01700fc3ce905f380a03b515ca224d0b0e7835",
-				"dweb:/ipfs/QmafHE2SVj852ZKaXaxH4k4acbU2PzZvsJj881pYRM8Cn9"
+				"bzz-raw://09ddde4e63841b471eded8ce24ae2765d81ecbf2dc5f00fa34afdbe5bc4a2e37",
+				"dweb:/ipfs/QmUj7Q69abyXUQf3odhuwcg58ZDgYPLHWK3G2eU4k1Kkk5"
 			]
 		}
 	},

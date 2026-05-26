@@ -10,7 +10,7 @@
   "contracts/Lab1.sol": {
     "__sources__": {
       "contracts/Lab1.sol": {
-        "content": "//SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\ncontract Chat {\r\n    string public message;\r\n\r\n    constructor(string memory initialMessage) {\r\n        message = initialMessage;\r\n    }\r\n\r\n    function setMessage(string memory newMessage) public {\r\n        message = newMessage;\r\n    }\r\n\r\n    function getMessage() public view returns(string memory) {\r\n        return message;\r\n    }\r\n}",
+        "content": "//SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\ncontract Chat {\r\n    string public message;\r\n\r\n    constructor(string memory initialMessage) {\r\n        message = initialMessage;\r\n    }\r\n\r\n    function setMessage(string memory newMessage) public {\r\n        message = newMessage;\r\n    }\r\n}",
         "file": "contracts/Lab1.sol"
       }
     }
