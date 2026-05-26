@@ -30,6 +30,135 @@
 				],
 				"stateMutability": "pure",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "idx",
+						"type": "uint8"
+					}
+				],
+				"name": "arrayExplain3",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "idx",
+						"type": "uint8"
+					}
+				],
+				"name": "arrayExplain4",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "arrayExplain5",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "arrayExplain6",
+				"outputs": [
+					{
+						"internalType": "uint256[10]",
+						"name": "",
+						"type": "uint256[10]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "arrayExplain7",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "arrayExplain8",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "arrayExplain9",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "members",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "members2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -60,11 +189,11 @@
 	},
 	"sources": {
 		"contracts/Lab3.sol": {
-			"keccak256": "0x91876d584fab63fc513af945b3316671e79638eef8f4d52bf7fa139a256a0398",
+			"keccak256": "0x71faa86f55eb0e9faf977eb4e43b453c3c5637d20ba2f5a5190af4b80e4778bb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8d9a245a2a04152fa4934021d2da76c6905685b01c05a803763f1f1f060210ea",
-				"dweb:/ipfs/QmWGJv9rPZ5M8FNEBZKjyY6ZkYq2Sfh5aeCHqnvE7E5dHp"
+				"bzz-raw://e3905ebb7dc0747739ad66b67f1be46331347ac1117f68e954a547f7837aac5f",
+				"dweb:/ipfs/Qmf2xvBspCsYa4jc4wQBA4fyvBKFkzEf7a8TEe17ygENH4"
 			]
 		}
 	},
