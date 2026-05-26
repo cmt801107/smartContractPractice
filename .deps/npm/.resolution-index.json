@@ -38,5 +38,13 @@
         "file": "contracts/Lab4.sol"
       }
     }
+  },
+  "contracts/Lab5.sol": {
+    "__sources__": {
+      "contracts/Lab5.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Demo5 {\r\n    struct Course {\r\n        string id;\r\n        string name;\r\n        uint256 duration;\r\n    }\r\n\r\n    Course currentCourse;\r\n    function setDefaultCourse() public {\r\n        currentCourse = Course(\"POOP\", \"Python OCP\", 35);\r\n    }\r\n\r\n     function setNewCourse(string memory newId, string memory newName, uint256 newDuration) public {\r\n        currentCourse = Course(newId, newName, newDuration);\r\n    }\r\n\r\n    function getCourseId() public view returns(string memory) {\r\n        return currentCourse.id;\r\n    }\r\n\r\n    function getCourse() public view returns (Course memory) {\r\n        return currentCourse;\r\n    }\r\n}",
+        "file": "contracts/Lab5.sol"
+      }
+    }
   }
 }
