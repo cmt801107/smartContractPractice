@@ -1,0 +1,82 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getMultiple",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMultipleWithoutReturns",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "sum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "plus",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Lab7.sol": "Demo7"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Lab7.sol": {
+			"keccak256": "0xbd00d3bcfe294c829b8d6b128393aaebf2d50b3aa2e261e758269371b11435b5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ef6b64422fae2bde90ceffeaec5a0486c26f71e79af1a029f89dd633b993ea6f",
+				"dweb:/ipfs/QmYCp9htgax35dEJ1GeQLAp6oVnPQhXwdcWdfkb6q5BPxk"
+			]
+		}
+	},
+	"version": 1
+}

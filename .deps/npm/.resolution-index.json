@@ -54,5 +54,13 @@
         "file": "contracts/Lab6.sol"
       }
     }
+  },
+  "contracts/Lab7.sol": {
+    "__sources__": {
+      "contracts/Lab7.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo7 {\r\n    function getMultiple() public pure returns(uint256, uint256) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        return (x+y, x*y);\r\n    }\r\n    function getMultipleWithoutReturns() public pure returns (uint256 sum, uint256 plus) {\r\n        uint256 x = 800;\r\n        uint256 y = 500;\r\n        sum = x+y;\r\n        plus = x*y;\r\n    }\r\n}",
+        "file": "contracts/Lab7.sol"
+      }
+    }
   }
 }
