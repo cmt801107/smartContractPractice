@@ -46,5 +46,13 @@
         "file": "contracts/Lab5.sol"
       }
     }
+  },
+  "contracts/Lab6.sol": {
+    "__sources__": {
+      "contracts/Lab6.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo6 {\r\n    mapping(address => uint256) public balances;\r\n    constructor() {\r\n        balances[address(this)]=99999;\r\n    } \r\n    function updateBalance(uint256 newBalance) public {\r\n        //msg.sender > 代表使用者的地址\r\n        balances[msg.sender] = newBalance;\r\n    }\r\n    function getContractBalance() public view returns(uint256){\r\n        //address(this) > 代表該合約的地址\r\n        return balances[address(this)];\r\n    }\r\n\r\n}",
+        "file": "contracts/Lab6.sol"
+      }
+    }
   }
 }
