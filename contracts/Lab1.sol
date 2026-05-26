@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: BSD
 pragma solidity ^0.7.4;
 contract Chat {
     string public message;
