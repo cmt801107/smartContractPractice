@@ -22,5 +22,13 @@
         "file": "contracts/Lab2.sol"
       }
     }
+  },
+  "contracts/Lab3.sol": {
+    "__sources__": {
+      "contracts/Lab3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo3 {\r\n    //陣列預設方法1\r\n    function arrayExplain1() public pure returns(uint256){\r\n        uint len = 7;\r\n        uint256[] memory a = new uint256[](len);\r\n        return a.length;\r\n    }\r\n     //陣列預設方法2\r\n    function arrayExplain2() public pure returns(uint256){\r\n        uint256[10] memory b;\r\n        return b.length;\r\n    }\r\n}",
+        "file": "contracts/Lab3.sol"
+      }
+    }
   }
 }
