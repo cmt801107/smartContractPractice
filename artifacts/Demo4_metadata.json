@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getCurrentSize",
+				"outputs": [
+					{
+						"internalType": "enum Demo4.StarbuckSize",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDefaultSize",
+				"outputs": [
+					{
+						"internalType": "enum Demo4.StarbuckSize",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDefaultSize2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Demo4.StarbuckSize",
+						"name": "newSize",
+						"type": "uint8"
+					}
+				],
+				"name": "setCurrentSize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newSize",
+						"type": "uint256"
+					}
+				],
+				"name": "setCurrentSize2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setVenti",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Lab4.sol": "Demo4"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Lab4.sol": {
+			"keccak256": "0xeabf5615516b3e5c7fd68109244833efb09a8b6a9dc93ff6e3d603d0e083fece",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4a55c660391c4bec4ce554182fe25747e359b0b3d6d6d2c555cd287f306cbcba",
+				"dweb:/ipfs/QmdGrorhvEVoa3T1qATG9JG6Xqm6b4SrUNZUT41tWqwznG"
+			]
+		}
+	},
+	"version": 1
+}

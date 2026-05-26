@@ -30,5 +30,13 @@
         "file": "contracts/Lab3.sol"
       }
     }
+  },
+  "contracts/Lab4.sol": {
+    "__sources__": {
+      "contracts/Lab4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract Demo4 {\r\n    enum StarbuckSize {SHORT, TAll, GRANDE, VENTI, TRENTA}\r\n    StarbuckSize size;\r\n    StarbuckSize constant defaultSize = StarbuckSize.TAll;\r\n\r\n    function setVenti() public{\r\n        size = StarbuckSize.VENTI;\r\n    }\r\n    function getCurrentSize() public view returns(StarbuckSize){\r\n        return size;\r\n    }\r\n\r\n    function getDefaultSize() public pure returns(StarbuckSize){\r\n        return defaultSize;\r\n    }\r\n\r\n     function getDefaultSize2() public pure returns(uint256){\r\n        return uint256(defaultSize);\r\n    }\r\n\r\n    function setCurrentSize(StarbuckSize newSize) public {\r\n        size = newSize;\r\n    }\r\n\r\n    function setCurrentSize2(uint256 newSize) public{\r\n        size = StarbuckSize(newSize);\r\n    }\r\n}",
+        "file": "contracts/Lab4.sol"
+      }
+    }
   }
 }
